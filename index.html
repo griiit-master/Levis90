@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- =============================================
+    PAGE TITLE — Change this to your organization name
+  ============================================= -->
+  <title>Tulinde Wankongwe | Empowering Kenya</title>
+
+  <!-- Google Fonts — two font families used:
+      "Playfair Display" for headings (elegant, authoritative)
+      "DM Sans" for body text (clean, readable) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Main stylesheet for all pages -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- =============================================
+    NAVIGATION BAR
+    File: assets/js/nav.js loads this dynamically.
+    To edit the menu links, go to: assets/js/nav.js
+  ============================================= -->
+  <div id="nav-placeholder"></div>
+
+  <!-- =============================================
+    HERO SECTION
+    The big banner at the top of the homepage.
+    Change the headline, sub-text, and button text below.
+  ============================================= -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-tag">Based in Kenya 🇰🇪</span>
+      <h1>Changing Lives,<br/>One Community<br/>at a Time</h1>
+      <p>We empower the less privileged through scholarships, community development, and sustainable support programs across Kenya.</p>
+      <div class="hero-buttons">
+        <!-- Primary call-to-action button -->
+        <a href="donate.html" class="btn btn-primary">Donate Now</a>
+        <!-- Secondary button -->
+        <a href="about.html" class="btn btn-outline">Learn More</a>
+      </div>
+    </div>
+    <!-- Decorative geometric shapes for visual interest -->
+    <div class="hero-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+  </section>
+
+  <!-- =============================================
+    STATS SECTION
+    Shows key numbers about the organization.
+    Edit the numbers and labels directly below.
+  ============================================= -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <!-- Each .stat-card holds one number and its label -->
+        <div class="stat-card">
+          <span class="stat-number" data-count="2400">0</span>
+          <span class="stat-label">Lives Impacted</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-count="320">0</span>
+          <span class="stat-label">Scholarships Awarded</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-count="47">0</span>
+          <span class="stat-label">Communities Served</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-count="12">0</span>
+          <span class="stat-label">Years of Service</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+    WHAT WE DO SECTION
+    Cards describing the organization's programs.
+    To add or remove a program, copy or delete a .program-card block.
+  ============================================= -->
+  <section class="programs">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Programs</span>
+        <h2>What We Do</h2>
+        <p>We run several targeted programs to uplift communities and individuals across Kenya.</p>
+      </div>
+      <div class="programs-grid">
+
+        <!-- Program Card 1 — edit icon, title, and description -->
+        <div class="program-card">
+          <div class="program-icon">🎓</div>
+          <h3>Scholarship Program</h3>
+          <p>We fund bright but underprivileged students from primary school through university, covering tuition, materials, and mentorship.</p>
+        </div>
+
+        <!-- Program Card 2 -->
+        <div class="program-card">
+          <div class="program-icon">🏘️</div>
+          <h3>Community Development</h3>
+          <p>Building infrastructure, clean water access, and shared resources in rural and urban-slum communities across Kenya.</p>
+        </div>
+
+        <!-- Program Card 3 -->
+        <div class="program-card">
+          <div class="program-icon">🍱</div>
+          <h3>Food & Nutrition</h3>
+          <p>Regular food distributions and nutrition awareness campaigns targeting families in food-insecure regions.</p>
+        </div>
+
+        <!-- Program Card 4 -->
+        <div class="program-card">
+          <div class="program-icon">💼</div>
+          <h3>Skills & Livelihood</h3>
+          <p>Vocational training and small business grants that help youth and women build sustainable income streams.</p>
+        </div>
+
+        <!-- Program Card 5 -->
+        <div class="program-card">
+          <div class="program-icon">🏥</div>
+          <h3>Healthcare Access</h3>
+          <p>Medical outreach camps, health insurance support, and partnerships with hospitals for the less privileged.</p>
+        </div>
+
+        <!-- Program Card 6 -->
+        <div class="program-card">
+          <div class="program-icon">🌱</div>
+          <h3>Environmental Action</h3>
+          <p>Tree planting, environmental education, and eco-friendly community projects for a greener Kenya.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+    QUICK GALLERY PREVIEW (HOME PAGE)
+    Shows 4 images as a teaser. Full gallery is on gallery.html.
+    Replace the placeholder img src values with your actual image paths.
+  ============================================= -->
+  <section class="gallery-preview">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Work in Pictures</span>
+        <h2>Moments That Matter</h2>
+      </div>
+      <div class="gallery-grid-small">
+        <!-- Replace "assets/images/..." with your actual photo filenames -->
+        <div class="gallery-thumb" style="background-image: url('assets/images/gallery1.jpg')">
+          <div class="gallery-thumb-overlay">Community Outreach</div>
+        </div>
+        <div class="gallery-thumb" style="background-image: url('assets/images/gallery2.jpg')">
+          <div class="gallery-thumb-overlay">Scholarship Awards</div>
+        </div>
+        <div class="gallery-thumb" style="background-image: url('assets/images/gallery3.jpg')">
+          <div class="gallery-thumb-overlay">Food Distribution</div>
+        </div>
+        <div class="gallery-thumb" style="background-image: url('assets/images/gallery4.jpg')">
+          <div class="gallery-thumb-overlay">Skills Training</div>
+        </div>
+      </div>
+      <div class="center-btn">
+        <a href="gallery.html" class="btn btn-primary">View Full Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+    CALL TO ACTION (CTA) BANNER
+    The colored strip encouraging donations.
+    Edit the text and button link below.
+  ============================================= -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Make a Difference?</h2>
+        <p>Your support — big or small — transforms lives in Kenya every single day.</p>
+        <a href="donate.html" class="btn btn-white">Support Our Mission</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+    FOOTER
+    Loaded dynamically from assets/js/footer.js.
+    To edit footer content, go to: assets/js/footer.js
+  ============================================= -->
+  <div id="footer-placeholder"></div>
+
+  <!-- JavaScript files — load order matters -->
+  <!-- nav.js: injects the navigation bar -->
+  <script src="nav.js"></script>
+  <!-- footer.js: injects the footer -->
+  <script src="footer.js"></script>
+  <!-- main.js: handles animations, counters, etc. -->
+  <script src="main.js"></script>
+</body>
+</html>
