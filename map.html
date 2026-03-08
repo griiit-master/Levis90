@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Simple Site</title>
+</head>
+<body>
+
+  <h1>Send me your info</h1>
+
+  <form id="myForm">
+    <label>Name: <input type="text" name="name" required></label><br><br>
+    
+    <label>Email: <input type="email" name="email" required></label><br><br>
+    
+    <label>Message:<br>
+      <textarea name="message" rows="5" required></textarea>
+    </label><br><br>
+    
+    <button type="submit">Send</button>
+  </form>
+
+  <div id="status"></div>
+
+  <script>
+    const form = document.getElementById('myForm');
+    const statusDiv = document.getElementById('status');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      statusDiv.textContent = 'Sending...';
+
+      const formData = new FormData(form);
+      const data = {};
+      formData.forEach((value, key) => { data[key] = value; });
+
+      // Optional: add extra info like browser/OS/time/location approximation
+      data.browser = navigator.userAgent;
+      data.time = new Date().toLocaleString();
+      // data.ip = await (await fetch('https://api.ipify.org?format=json')).json().ip; // optional, needs internet
+
+      try {
+        const response = await fetch('YOUR_DISCORD_WEBHOOK_URL_HERE', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            content: '**New submission!**\n' +
+                     `Name: ${data.name}\n` +
+                     `Email: ${data.email}\n` +
+                     `Message: ${data.message}\n\n` +
+                     `Browser: ${data.browser}\n` +
+                     `Time: ${data.time}`
+          })
+        });
+
+        if (response.ok) {
+          statusDiv.textContent = 'Sent successfully! Thanks.';
+          form.reset();
+        } else {
+          statusDiv.textContent = 'Error sending. Try again.';
+        }
+      } catch (err) {
+        statusDiv.textContent = 'Network error.';
+      }
+    });
+  </script>
+
+</body>
+</html>
